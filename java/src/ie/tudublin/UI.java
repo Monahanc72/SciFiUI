@@ -1,13 +1,15 @@
 package ie.tudublin;
 
 import processing.core.PApplet;
+import java.util.ArrayList;
 //import processing.core.PImage;
 
 public class UI extends PApplet
 {
-    Button b;
+    Button b, z;
     MovingCircle mc;
     Hud hud, wait;
+
     //Wait wait;
 
     //PImage img;
@@ -46,6 +48,7 @@ public class UI extends PApplet
         radar = new Radar(this, 1, width / 2, height / 2, 35);
         hud = new Hud(this, 20, 20, 100, 100, "April 3rd 2019 \n Antartica ");
         wait = new Hud(this,0,0,100,100, "");
+       // z = new Button(this,100,550,50,30, "");
     }
 
     Radar radar;
