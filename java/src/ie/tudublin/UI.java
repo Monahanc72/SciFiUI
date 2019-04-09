@@ -1,11 +1,16 @@
 package ie.tudublin;
 
 import processing.core.PApplet;
+//import processing.core.PImage;
 
 public class UI extends PApplet
 {
     Button b;
     MovingCircle mc;
+    Hud hud, wait;
+    //Wait wait;
+
+    //PImage img;
 
     boolean[] keys = new boolean[1024];
 
@@ -16,7 +21,7 @@ public class UI extends PApplet
     
     public void keyReleased()
     {
-        keys[keyCode] = false;
+        keys[keyCode] = true;
     }
 
     public boolean checkKey(int c)
@@ -30,13 +35,17 @@ public class UI extends PApplet
         size(800, 800);
         // Use fullscreen instead of size to make your interface fullscreen
         //fullScreen(P3D); 
+      // img = loadImage("images/antartica4.png");
+        //img = loadImage("images/navy.png");
     }
 
     public void setup()
     {
-        b = new Button(this, 50, 50, 100, 50, "I am a button");
-        mc = new MovingCircle(this, width / 2, height * .75f, 50);
-        radar = new Radar(this, 1, width / 2, height / 2, 100);
+        b = new Button(this, 100, 550, 50, 30, ""); //x,y,w,h
+        mc = new MovingCircle(this, width / 2, height * .75f, 20);
+        radar = new Radar(this, 1, width / 2, height / 2, 35);
+        hud = new Hud(this, 20, 20, 100, 100, "April 3rd 2019 \n Antartica ");
+        wait = new Hud(this,0,0,100,100, "");
     }
 
     Radar radar;
@@ -49,13 +58,22 @@ public class UI extends PApplet
         mc.update();
         mc.render();
 
-        radar.update();
-        radar.render();
+        hud.render();
 
-        if (checkKey(LEFT))
-        {
-            System.out.println("Left arrow key pressed");
+        wait.Wait();
+
+        //radar.update();
+        //radar.render();
+
+
+         if (checkKey(LEFT))
+         {
+             radar.update();
+             radar.render();
         }
+        
+        mouseClicked();
     }
+
 }
 
