@@ -6,7 +6,6 @@ import processing.core.PVector;
 public class Radar
 {
     private float radius;
-    private float x,y;
     private float diameter = 1;
     private PVector pos;
     private float frequency;

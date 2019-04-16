@@ -1,7 +1,6 @@
 package ie.tudublin;
 
 import processing.core.PApplet;
-import java.util.ArrayList;
 
 public class Button
 {
@@ -11,17 +10,6 @@ public class Button
     private float width;
     private float height;
     private String text;
-
-
-
-    // public static void arek(UI ui,String[] args)
-    // {
-    //     ArrayList listTest = new ArrayList( );
-    //     listTest.add( "first item" );
-    //     listTest.add( "second item" );
-    //     listTest.add( "third item" );
-    //     listTest.add( 7 );
-    //     System.out.println("whole chatski is =" + listTest);
     
     public Button(UI ui, float x, float y, float width, float height, String text)
     {
@@ -41,13 +29,5 @@ public class Button
         ui.textAlign(PApplet.CENTER, PApplet.CENTER);
         ui.text(text, x + width * 0.5f, y + height * 0.5f);
 
-
-
-        ArrayList listTest = new ArrayList( );
-        listTest.add( "first item" );
-        listTest.add( "second item" );
-        listTest.add( "third item" );
-        listTest.add( 7 );
-        System.out.println("whole chatski is =" + listTest);
     }
 }

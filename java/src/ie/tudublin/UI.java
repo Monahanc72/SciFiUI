@@ -44,19 +44,20 @@ public class UI extends PApplet
     public void setup()
     {
         b = new Button(this, 100, 550, 50, 30, ""); //x,y,w,h
+        z = new Button(this,600,550,100,50, "Warning");
         mc = new MovingCircle(this, width / 2, height * .75f, 20);
         ov = new MovingCircle(this,width /2,height * .5f,200);
         radar = new Radar(this, 1, width / 2, height / 2, 35);
         hud = new Hud(this, 20, 20, 100, 100, "April 3rd 2019 \n Antartica ");
         wait = new Hud(this,0,0,100,100, "");
         sh = new Shapes(this,100,550,5,3);
-       // z = new Button(this,100,550,50,30, "");
     }
 
     public void draw()
     {
         background(0);
         b.render();
+        z.render();
 
         mc.update();
         mc.render();
