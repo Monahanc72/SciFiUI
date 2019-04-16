@@ -7,10 +7,10 @@ import java.util.ArrayList;
 public class UI extends PApplet
 {
     Button b, z;
-    MovingCircle mc;
+    MovingCircle mc,ov;
     Hud hud, wait;
-
-    //Wait wait;
+    Radar radar;
+    Shapes sh;
 
     //PImage img;
 
@@ -45,13 +45,13 @@ public class UI extends PApplet
     {
         b = new Button(this, 100, 550, 50, 30, ""); //x,y,w,h
         mc = new MovingCircle(this, width / 2, height * .75f, 20);
+        ov = new MovingCircle(this,width /2,height * .5f,200);
         radar = new Radar(this, 1, width / 2, height / 2, 35);
         hud = new Hud(this, 20, 20, 100, 100, "April 3rd 2019 \n Antartica ");
         wait = new Hud(this,0,0,100,100, "");
+        sh = new Shapes(this,100,550,5,3);
        // z = new Button(this,100,550,50,30, "");
     }
-
-    Radar radar;
 
     public void draw()
     {
@@ -65,6 +65,7 @@ public class UI extends PApplet
 
         wait.Wait();
 
+        sh.render();
         //radar.update();
         //radar.render();
 

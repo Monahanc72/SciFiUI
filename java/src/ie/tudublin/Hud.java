@@ -77,6 +77,8 @@ public class Hud
          ui.line(-100, 300, 100, 100); //top left
          ui.line(-100, 300, 100, 100); //top left
 
+         
+
          ui.textAlign(PApplet.CENTER, PApplet.CENTER);
          ui.text(text, (x + 570)+ width * 0.5f, y + height * 0.5f);
       //ui.text(text2, (x + 570)+ width * 0.5f, y + height * 0.5f);
