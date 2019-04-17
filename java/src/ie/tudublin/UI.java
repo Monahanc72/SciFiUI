@@ -66,7 +66,7 @@ public class UI extends PApplet
 
         wait.Wait();
 
-        sh.render();
+       // sh.render();
         //radar.update();
         //radar.render();
 

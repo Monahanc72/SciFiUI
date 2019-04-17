@@ -64,18 +64,42 @@ public class Hud
          // draw the rectangle here
          ui.noFill();
     //   ui.line(x + 520, y - 30, width + 170, height + 10);
-         ui.line(100, 100, 720, 99);//top centre
-         ui.line(100, 100, 720, 99);//top centre
-         ui.line(100, 500, 720, 501); //bottom centre
-         ui.line(100, 500, 720, 501); //bottom centre
-         ui.line(-100, 300, 100, 500); //bottom left
-         ui.line(-100, 300, 100, 500); //bottom left
-         ui.line(1000, 80, 720, 500); //bottom right
-         ui.line(1000, 80, 720, 500); //bottom right
-         ui.line(1000, 500, 720, 100); //top right
-         ui.line(1000, 500, 720, 100); //top right
-         ui.line(-100, 300, 100, 100); //top left
-         ui.line(-100, 300, 100, 100); //top left
+        //  ui.line(100, 100, 720, 99);//top centre
+        //  ui.line(100, 100, 720, 99);//top centre
+        //  ui.line(100, 500, 720, 501); //bottom centre
+        //  ui.line(100, 500, 720, 501); //bottom centre
+        //  ui.line(-100, 300, 100, 500); //bottom left
+        //  ui.line(-100, 300, 100, 500); //bottom left
+        //  ui.line(1000, 80, 720, 500); //bottom right
+        //  ui.line(1000, 80, 720, 500); //bottom right
+        //  ui.line(1000, 500, 720, 100); //top right
+        //  ui.line(1000, 500, 720, 100); //top right
+        //  ui.line(-100, 300, 100, 100); //top left
+        //  ui.line(-100, 300, 100, 100); //top left
+        //  ui.noFill();
+        // ui.beginShape();
+        // ui.vertex(250,150); //side
+        // ui.vertex(250,150); //side
+        // ui.vertex(250,500);
+        // ui.vertex(450,500);
+
+        //inner screen
+        ui.line(450, 500, 250, 500); //bottom
+        ui.line(450, 100, 250, 100); //top
+        ui.line(450, 500, 450, 100); //right side
+        ui.line(250, 500, 250, 100); //left side
+        //outter screen 
+        ui.line(450, 550, 250, 550); //bottom
+        ui.line(450, 50, 250, 50); //top
+        ui.line(480, 500, 480, 100); //right side
+        ui.line(220, 500, 220, 100); //left side
+        ui.ellipse(337, 525, 30, 30); //circle
+
+
+        //ui.vertex(300,107);
+        //ui.vertex(410,100);
+        //ui.vertex(250,420);
+        ui.endShape();
 
          
 
