@@ -6,6 +6,9 @@ import java.util.ArrayList;
 
 public class UI extends PApplet
 {
+    private float i;
+    private float x;
+    private float y;
     Button b, z;
     MovingCircle mc,ov;
     Hud hud, wait;
@@ -13,6 +16,13 @@ public class UI extends PApplet
     Shapes sh;
 
     //PImage img;
+
+    // public void mouseClicked() {
+    //     if (b == PRESSED) {
+    //       radar.render();
+    //     }
+    //   }
+
 
     boolean[] keys = new boolean[1024];
 
@@ -43,8 +53,8 @@ public class UI extends PApplet
 
     public void setup()
     {
-        b = new Button(this, 100, 550, 50, 30, ""); //x,y,w,h
-        z = new Button(this,600,550,100,50, "Warning");
+        b = new Button(this, 100, 550, 50, 30, "",0); //x,y,w,h
+        z = new Button(this,600,550,100,50, "Warning",0);
         mc = new MovingCircle(this, width / 2, height * .75f, 20);
         ov = new MovingCircle(this,width /2,height * .5f,200);
         radar = new Radar(this, 1, width / 2, height / 2, 35);
@@ -56,13 +66,12 @@ public class UI extends PApplet
     public void draw()
     {
         background(0);
+        hud.render();
         b.render();
         z.render();
 
-        mc.update();
-        mc.render();
-
-        hud.render();
+        //mc.update();
+       // mc.render();
 
         wait.Wait();
 
@@ -76,8 +85,28 @@ public class UI extends PApplet
              radar.update();
              radar.render();
         }
-        
-        mouseClicked();
+
+            //mouseClicked();
+            // if(this.mousePressed)
+            // {
+            //     if(this.mouseX > x && this.mouseX < x + width && this.mouseY > y && this.mouseY < y + height)
+            //     {
+            //         i += 1;
+            //         //System.out.println(i);
+            //        // ui.delay(200);//delays the button so that it cannot increment by more than one
+            //     }
+    
+            //      if((i % 2) == 0)
+            //    {
+            // //     //ui.ellipse(337, 325, 30, 30);
+            //         this.fill(255);
+            //         this.rect(250, 100, 200, 400);
+            //     radar.update();
+            //     radar.render();
+               
+             // }
+           // }
+
     }
 
 }

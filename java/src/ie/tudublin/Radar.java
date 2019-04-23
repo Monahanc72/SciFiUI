@@ -38,38 +38,6 @@ public class Radar
         ui.ellipse(pos.x + 320, pos.y -350, radius * (float) 1.50, radius * (float) 1.50);
         ui.ellipse(pos.x + 320, pos.y -350, radius * (float) 1, radius * (float) 1);
         ui.ellipse(pos.x + 320, pos.y -350, radius * (float) .50, radius * (float) .50);
-        // ui.stroke(opacity,opacity,opacity);
-        // ui.fill(opacity);
-        // ui.ellipse((pos.x - 280) + (radius * 1), pos.y -300, diameter, diameter);
-        // ui.stroke(opacity2,opacity2,opacity2);
-        // ui.fill(opacity2);
-        // ui.ellipse((pos.x - 250) -(radius * 1), pos.y -300, diameter, diameter);
-        // ui.fill(255);
-        //opacity --;
-        //ui.fill(opacity);
-        //ui.stroke(255,255,255,opacity);
-        //ui.ellipse(ui.width/5, ui.height /5, diameter, diameter);
-
-        // if( opacity == 0)
-        // {
-        //     opacity ++;
-        // }
-
-        // if( opacity == 255)
-        // {
-        //     opacity --;
-        // }
-
-        // for(i=255; i>0;i--)
-        // {
-        //     opacity --;
-        // }
-
-
-        // for(i=0; i< 255;i++)
-        // {
-        //     opacity ++;
-        // }
 
 
     if(x2 == (pos.x + 320) + (radius * 1))
@@ -80,10 +48,6 @@ public class Radar
         opacity--;
     }
 
-    // if(y2 == (pos.y - 300) + (radius * 1))
-    // {
-    //     opacity -= 255;
-    // }
 
     if(x2 == (pos.x + 320) - (radius * 1))
     {
@@ -106,13 +70,6 @@ public class Radar
     ui.fill(opacity3);
     ui.ellipse((pos.x - 250) -(radius * 1), pos.y -300, diameter, diameter);
     ui.fill(255);
-
-    // if(y2 == (pos.y - 300) - (radius * 1))
-    // {
-    //     opacity2 -= 255;
-    // }
-
-    //System.out.println("yes");
     }
 
     float timeDelta = 1.0f / 300.0f;
