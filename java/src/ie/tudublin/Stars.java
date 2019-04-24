@@ -12,6 +12,8 @@ public class Stars
     private float width= 450;
     private float height= 450;
     private float PI = 3;
+    private int xx = 50;
+    private int yy = 50;
     UI ui;
 
     public Stars(UI ui, float x, float y, float width, float height)
@@ -33,8 +35,9 @@ public class Stars
         //ui.fill(255);
        // ui.ellipse(ui.random(width), ui.random(height), 20, 20);
        ui.fill(255);
-       ui.rect(146, ui.random(height), 2,2);
-       ui.rect(156, ui.random(height), 2,2);
+      // ui.rect(146, ui.random(height), 2,2);
+      // ui.rect(156, ui.random(height), 2,2);
+      // ui.ellipse(ui.mouseX.xx,ui.mouseY.yy, 50,50);
       // ui.rect(146, 26, 2,2);
     }
 
