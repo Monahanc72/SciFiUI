@@ -14,7 +14,6 @@ public class Radar
     private float opacity = 0;
     private float opacity2 = 0;
     private float opacity3 = 0;
-    private float i = 255;
 
     public Radar(UI ui, float frequency, float x, float y, float radius)
     {
@@ -29,18 +28,18 @@ public class Radar
     
         ui.noFill();
         ui.stroke(0,204,0);
-        ui.ellipse(pos.x + 320, pos.y -350, radius * (float) 2, radius * (float) 2);
-        float x2 = (pos.x + 320)+ (float) Math.sin(theta) * radius;
-        float y2 = (pos.y -350) - (float) Math.cos(theta) * radius;
-        ui.line(pos.x +320, pos.y -350, x2, y2);
+        ui.ellipse(pos.x + 300, pos.y +150, radius * (float) 2, radius * (float) 2);
+        float x2 = (pos.x + 300)+ (float) Math.sin(theta) * radius;
+        float y2 = (pos.y +150) - (float) Math.cos(theta) * radius;
+        ui.line(pos.x +300, pos.y +150, x2, y2);
 
 
-        ui.ellipse(pos.x + 320, pos.y -350, radius * (float) 1.50, radius * (float) 1.50);
-        ui.ellipse(pos.x + 320, pos.y -350, radius * (float) 1, radius * (float) 1);
-        ui.ellipse(pos.x + 320, pos.y -350, radius * (float) .50, radius * (float) .50);
+        ui.ellipse(pos.x + 300, pos.y +150, radius * (float) 1.50, radius * (float) 1.50);
+        ui.ellipse(pos.x + 300, pos.y +150, radius * (float) 1, radius * (float) 1);
+        ui.ellipse(pos.x + 300, pos.y +150, radius * (float) .50, radius * (float) .50);
 
 
-    if(x2 == (pos.x + 320) + (radius * 1))
+    if(x2 == (pos.x + 300) + (radius * 1))
     {
         opacity = 255;
     }
@@ -49,7 +48,7 @@ public class Radar
     }
 
 
-    if(x2 == (pos.x + 320) - (radius * 1))
+    if(x2 == (pos.x + 300) - (radius * 1))
     {
         opacity2 = 255;
     }
@@ -57,23 +56,29 @@ public class Radar
         opacity2 --;
     }
 
+    if(x2 == (pos.x + 300) + (radius * 1))
+    {
+        opacity3 = 255;
+    }
+    else{
+        opacity3--;
+    }
 
 
     ui.stroke(opacity,opacity,opacity);
     ui.fill(opacity);
-    ui.ellipse((pos.x + 315) + (radius * 1), pos.y -350, diameter, diameter);
+    ui.ellipse((pos.x + 290) + (radius * 1), pos.y +150, diameter, diameter);
     ui.stroke(opacity2,opacity2,opacity2);
     ui.fill(opacity2);
-    ui.ellipse((pos.x + 325) -(radius * 1), pos.y -340, diameter, diameter);
+    ui.ellipse((pos.x + 305) -(radius * 1), pos.y +150, diameter, diameter);
     ui.fill(255);
     ui.stroke(opacity3,opacity3,opacity3);
     ui.fill(opacity3);
-    ui.ellipse((pos.x - 250) -(radius * 1), pos.y -300, diameter, diameter);
+    ui.ellipse((pos.x + 322) -(radius * 1), pos.y +180, diameter, diameter);
     ui.fill(255);
     }
 
     float timeDelta = 1.0f / 300.0f;
-    //float timeDot = 1.0f / 300.0f;
 
     public void update()
     {

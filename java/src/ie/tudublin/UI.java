@@ -11,18 +11,10 @@ public class UI extends PApplet
     private float y;
     Button b, z;
     MovingCircle mc,ov;
-    Hud hud, wait;
+    Hud hud;
     Radar radar;
     Shapes sh;
-
-    //PImage img;
-
-    // public void mouseClicked() {
-    //     if (b == PRESSED) {
-    //       radar.render();
-    //     }
-    //   }
-
+    Frame fr;
 
     boolean[] keys = new boolean[1024];
 
@@ -47,8 +39,6 @@ public class UI extends PApplet
         size(800, 800);
         // Use fullscreen instead of size to make your interface fullscreen
         //fullScreen(P3D); 
-      // img = loadImage("images/antartica4.png");
-        //img = loadImage("images/navy.png");
     }
 
     public void setup()
@@ -59,53 +49,24 @@ public class UI extends PApplet
         ov = new MovingCircle(this,width /2,height * .5f,200);
         radar = new Radar(this, 1, width / 2, height / 2, 35);
         hud = new Hud(this, 20, 20, 100, 100, "April 3rd 2019 \n Antartica ");
-        wait = new Hud(this,0,0,100,100, "");
         sh = new Shapes(this,100,550,5,3);
+        fr = new Frame(this, x,y,width,height);
     }
 
     public void draw()
     {
         background(0);
-        hud.render();
-        b.render();
-        z.render();
-
-        //mc.update();
-       // mc.render();
-
-        wait.Wait();
-
-       // sh.render();
-        //radar.update();
-        //radar.render();
-
-
-         if (checkKey(LEFT))
-         {
-             radar.update();
-             radar.render();
-        }
-
-            //mouseClicked();
-            // if(this.mousePressed)
-            // {
-            //     if(this.mouseX > x && this.mouseX < x + width && this.mouseY > y && this.mouseY < y + height)
-            //     {
-            //         i += 1;
-            //         //System.out.println(i);
-            //        // ui.delay(200);//delays the button so that it cannot increment by more than one
-            //     }
-    
-            //      if((i % 2) == 0)
-            //    {
-            // //     //ui.ellipse(337, 325, 30, 30);
-            //         this.fill(255);
-            //         this.rect(250, 100, 200, 400);
-            //     radar.update();
-            //     radar.render();
-               
-             // }
-           // }
+       // hud.render();
+        //b.render();
+        //z.render();
+        mc.update();
+        mc.render();
+        //sh.render();
+        radar.render();
+        radar.update();
+        //hud.render();   
+        
+        fr.Eoe();
 
     }
 

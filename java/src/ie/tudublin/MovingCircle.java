@@ -9,41 +9,35 @@ public class MovingCircle
     private float y;
     private float diameter;
     private float radius;
-    private float xx;
-    private float yy;
-    private float ww;
-    private float hh;
-
-
     UI ui;
 
     public MovingCircle(UI ui, float x, float y, float diameter)
     {
         this.ui = ui;
-        this.x = x;
-        this.y = y -250 ;
+        this.x = x - 250;
+        this.y = y -35 ;
         this.diameter = diameter;
         radius = diameter / 2;
     }
     
     public void render()
     {
+        ui.fill(200,21,50);
+        ui.rect(70, 553, 230, 25);
         ui.stroke(255);
         ui.fill(255);
         ui.ellipse(x, y, diameter, diameter);
         ui.stroke(255);
         ui.fill(51, 191, 88);
-        ui.ellipse(x, y, diameter, diameter);
+        ui.ellipse(30, 550, diameter, diameter);
         // Static field
         ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-        //ui.text("I am a moving circle", x, y);
-
     }
 
     public void update()
     {
         x += dx;
-        if ((x > ui.width - radius) || (x < radius +200 ))
+        if ((x > ui.width - radius -500) || (x < radius +80 ))
         {
             dx *= -1;
         }

@@ -5,13 +5,12 @@ import processing.core.PApplet;
 public class Button
 {
     UI ui;
-    private float x = 390;
-    private float y = 455;
-    private float width = 40;
-    private float height = 40;
+    private float x;
+    private float y;
+    private float width;
+    private float height;
     private String text;
     private float d;
-    private float i = 4;
     
     public Button(UI ui, float x, float y, float width, float height, String text,float d)
     {
@@ -25,17 +24,17 @@ public class Button
 
     public void render()
     {
-        ui.noFill();
-        ui.stroke(255);
-        ui.rect(270, 130, 40, 40);
-        ui.rect(330, 130, 40, 40);
-        ui.rect(390, 130, 40, 40);
-        ui.rect(270, 455, 40, 40);
-        ui.rect(330, 455, 40, 40);
-        ui.rect(390, 455, 40, 40);
-        ui.ellipse(337, 525, 30, 30); 
-        ui.line(300,140,280,140);//home button
-        ui.textAlign(PApplet.CENTER, PApplet.CENTER);
+       // ui.noFill();
+        // ui.stroke(255);
+        // ui.rect(270, 130, 40, 40);
+        // ui.rect(330, 130, 40, 40);
+        // ui.rect(390, 130, 40, 40);
+        // ui.rect(270, 455, 40, 40);
+        // ui.rect(330, 455, 40, 40);
+        // ui.rect(390, 455, 40, 40);
+        // ui.ellipse(337, 525, 30, 30); 
+        // ui.line(300,140,280,140);//home button
+        // ui.textAlign(PApplet.CENTER, PApplet.CENTER);
         //ui.text(text, x + width * 0.5f, y + height * 0.5f);
 
 
