@@ -38,7 +38,14 @@ public class Frame
 
           ui.translate(width/2, height/2);
           ui.rotate(PI/3);
-          ui.rect(-26, -26, 3,3); 
+          ui.rect(-26, -26, 3,3);
+          ui.rect(0, 0, 3,3);
+          ui.rect(126, 26, 2,2);
+          ui.rect(126, 26, 2,2);
+          ui.rect(146, 26, 2,2);
+          ui.rect(186, 26, 3,3);
+          ui.rect(216, 26, 3,3);
+          ui.rect(322, 52, 3,3); 
 
     
     }

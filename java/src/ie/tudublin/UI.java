@@ -15,6 +15,7 @@ public class UI extends PApplet
     Radar radar;
     Shapes sh;
     Frame fr;
+    Stars str;
 
     boolean[] keys = new boolean[1024];
 
@@ -51,6 +52,7 @@ public class UI extends PApplet
         hud = new Hud(this, 20, 20, 100, 100, "April 3rd 2019 \n Antartica ");
         sh = new Shapes(this,100,550,5,3);
         fr = new Frame(this, x,y,width,height);
+        str = new Stars(this,x,y,width,height);
     }
 
     public void draw()
@@ -67,6 +69,7 @@ public class UI extends PApplet
         //hud.render();   
         
         fr.Eoe();
+        str.Eoe();
 
     }
 

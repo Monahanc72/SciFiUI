@@ -1,6 +1,7 @@
 package ie.tudublin;
 
 import processing.core.PApplet;
+import processing.core.PVector;
 
 public class MovingCircle
 {
@@ -9,6 +10,8 @@ public class MovingCircle
     private float y;
     private float diameter;
     private float radius;
+    private float i;
+    private PVector pos;
     UI ui;
 
     public MovingCircle(UI ui, float x, float y, float diameter)
@@ -17,6 +20,7 @@ public class MovingCircle
         this.x = x - 250;
         this.y = y -35 ;
         this.diameter = diameter;
+        pos = new PVector(x, y);
         radius = diameter / 2;
     }
     
@@ -29,9 +33,9 @@ public class MovingCircle
         ui.ellipse(x, y, diameter, diameter);
         ui.stroke(255);
         ui.fill(51, 191, 88);
-        ui.ellipse(30, 550, diameter, diameter);
         // Static field
         ui.textAlign(PApplet.CENTER, PApplet.CENTER);
+
     }
 
     public void update()
