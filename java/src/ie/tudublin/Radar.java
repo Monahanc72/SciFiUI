@@ -84,7 +84,13 @@ public class Radar
     {
         theta += PApplet.TWO_PI * timeDelta * frequency;
         //theta2 += timeDot * frequency;
+        ui.stroke(255);
+        ui.noFill();
         ui.ellipse(ui.mouseX, ui.mouseY, 50, 50);
+        ui.line(ui.mouseX, ui.mouseY, ui.mouseX + 25, ui.mouseY);
+        ui.line(ui.mouseX, ui.mouseY, ui.mouseX - 25, ui.mouseY);
+        ui.line(ui.mouseX, ui.mouseY, ui.mouseX, ui.mouseY + 25);
+        ui.line(ui.mouseX, ui.mouseY, ui.mouseX, ui.mouseY - 25);
     }
 
     /**

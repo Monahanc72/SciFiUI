@@ -35,7 +35,6 @@ public class MovingCircle
         ui.fill(51, 191, 88);
         // Static field
         ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-
     }
 
     public void update()
@@ -43,7 +42,19 @@ public class MovingCircle
         x += dx;
         if ((x > ui.width - radius -500) || (x < radius +80 ))
         {
-            dx *= -1;
+            dx *= -1.05;
+            
+            //if(dx > 1.2 || dx < 0)
+            if(dx > 49)
+            {
+               // System.out.println("Hi");
+                 ui.fill(25, 96, 21);
+                 ui.rect(70, 503, 230, 25);
+                dx = 0;
+            }
         }
+
+       //System.out.println(x);
+        System.out.println(dx);
     }
 }

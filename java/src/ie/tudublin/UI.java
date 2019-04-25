@@ -69,7 +69,7 @@ public class UI extends PApplet
         //hud.render();   
         
         fr.Eoe();
-        str.Eoe();
+       // str.Eoe();
 
     }
 

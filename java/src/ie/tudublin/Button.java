@@ -27,16 +27,6 @@ public class Button
        // ui.noFill();
         // ui.stroke(255);
         // ui.rect(270, 130, 40, 40);
-        // ui.rect(330, 130, 40, 40);
-        // ui.rect(390, 130, 40, 40);
-        // ui.rect(270, 455, 40, 40);
-        // ui.rect(330, 455, 40, 40);
-        // ui.rect(390, 455, 40, 40);
-        // ui.ellipse(337, 525, 30, 30); 
-        // ui.line(300,140,280,140);//home button
-        // ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-        //ui.text(text, x + width * 0.5f, y + height * 0.5f);
-
 
 
        if(ui.mousePressed)
