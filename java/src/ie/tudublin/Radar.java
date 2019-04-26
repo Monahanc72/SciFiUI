@@ -96,7 +96,7 @@ public class Radar
 
     }
 
-    public void Eoe()
+    public void keychk()
     {
         ui.stroke(0);
         ui.noFill();

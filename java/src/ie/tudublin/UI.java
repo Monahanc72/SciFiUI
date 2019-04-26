@@ -6,7 +6,6 @@ import java.util.ArrayList;
 
 public class UI extends PApplet
 {
-    private float i;
     private float x;
     private float y;
     Button b, z;
@@ -63,15 +62,20 @@ public class UI extends PApplet
         //z.render();
         mc.update();
         mc.render();
+        //mc.keychk();
         //sh.render();
         radar.render();
         radar.update();
         //hud.render();   
         
         fr.Eoe();
-        radar.Eoe();
+        radar.keychk();
        // str.Eoe();
 
+       if (keyCode == LEFT)
+       {
+           mc.keychk();
+       }
     }
 
 }

@@ -7,6 +7,8 @@ public class MovingCircle
 {
     private float x;
     private float dx = 1;
+    private float dy;
+    private float x2 =1;
     private float y;
     private float diameter;
     private float radius;
@@ -31,17 +33,6 @@ public class MovingCircle
     {
         ui.fill(200,21,50);
         ui.rect(70, 553, 230, 25);
-        // ui.rect(200,150,10,10);
-        // ui.rect(218,250,10,10);
-        // ui.rect(270,250,10,10);
-        // ui.rect(255,273,10,10);
-        // ui.rect(325,129,10,10);
-        // ui.rect(290,218,10,10);
-        // ui.rect(305,249,10,10);
-        // ui.rect(315,196,10,10);
-        // ui.rect(325,237,10,10);
-        // ui.rect(335,210,10,10);
-        // ui.rect(345,250,10,10);
         ui.stroke(255);
         ui.fill(255);
         ui.ellipse(x, y, diameter, diameter);
@@ -132,13 +123,19 @@ public class MovingCircle
             ui.rect(519,29,3,3);
         }
 
-
-
-
-
-        //}
-
        //System.out.println(x);
         //System.out.println(dx);
+    }
+
+    public void keychk()
+    {
+            ui.stroke(255);
+            ui.fill(255,30,10);
+            ui.ellipse(x2  + 100, y - 300, diameter, diameter);
+            dy += x2;
+            if ((x2 > ui.width - radius -400) || (x2 < radius +80 ))
+            {
+                dy *= 1;
+            }
     }
 }
