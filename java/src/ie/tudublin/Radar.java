@@ -6,7 +6,7 @@ import processing.core.PVector;
 public class Radar
 {
     private float radius;
-    private float diameter = 1;
+    private float diameter = 5;
     private PVector pos;
     private float frequency;
     private UI ui;
@@ -28,15 +28,15 @@ public class Radar
     
         ui.noFill();
         ui.stroke(0,204,0);
-        ui.ellipse(pos.x + 300, pos.y +150, radius * (float) 2, radius * (float) 2);
+        ui.ellipse(pos.x + 300, pos.y +150, radius * (float) 2.50, radius * (float) 2.50);
         float x2 = (pos.x + 300)+ (float) Math.sin(theta) * radius;
         float y2 = (pos.y +150) - (float) Math.cos(theta) * radius;
-        ui.line(pos.x +300, pos.y +150, x2, y2);
+        ui.line(pos.x +300, pos.y +150, x2 +10, y2);
 
 
-        ui.ellipse(pos.x + 300, pos.y +150, radius * (float) 1.50, radius * (float) 1.50);
-        ui.ellipse(pos.x + 300, pos.y +150, radius * (float) 1, radius * (float) 1);
-        ui.ellipse(pos.x + 300, pos.y +150, radius * (float) .50, radius * (float) .50);
+        ui.ellipse(pos.x + 300, pos.y +150, radius * (float) 1.75, radius * (float) 1.75);
+        ui.ellipse(pos.x + 300, pos.y +150, radius * (float) 1.0, radius * (float) 1.0);
+        ui.ellipse(pos.x + 300, pos.y +150, radius * (float) 0.25, radius * (float) 0.25);
 
 
     if(x2 == (pos.x + 300) + (radius * 1))
@@ -67,26 +67,28 @@ public class Radar
 
     ui.stroke(opacity,opacity,opacity);
     ui.fill(opacity);
-    ui.ellipse((pos.x + 290) + (radius * 1), pos.y +150, diameter, diameter);
+    ui.ellipse((pos.x + 290) + (radius * (float)1), pos.y +150, diameter, diameter);
     ui.stroke(opacity2,opacity2,opacity2);
     ui.fill(opacity2);
-    ui.ellipse((pos.x + 305) -(radius * 1), pos.y +150, diameter, diameter);
+    ui.ellipse((pos.x + 305) -(radius * 1), pos.y +132, diameter, diameter);
     ui.fill(255);
     ui.stroke(opacity3,opacity3,opacity3);
     ui.fill(opacity3);
-    ui.ellipse((pos.x + 322) -(radius * 1), pos.y +180, diameter, diameter);
+    ui.ellipse((pos.x + 322) -(radius * 1), pos.y +185, diameter, diameter);
     ui.fill(255);
     }
 
-    float timeDelta = 1.0f / 300.0f;
+    float timeDelta = 1.f / 300.0f;
 
     public void update()
     {
         theta += PApplet.TWO_PI * timeDelta * frequency;
         //theta2 += timeDot * frequency;
+        //crosshair for aiming
         ui.stroke(255);
         ui.noFill();
         ui.ellipse(ui.mouseX, ui.mouseY, 50, 50);
+        ui.stroke(255,0,0);
         ui.line(ui.mouseX, ui.mouseY, ui.mouseX + 25, ui.mouseY);
         ui.line(ui.mouseX, ui.mouseY, ui.mouseX - 25, ui.mouseY);
         ui.line(ui.mouseX, ui.mouseY, ui.mouseX, ui.mouseY + 25);
