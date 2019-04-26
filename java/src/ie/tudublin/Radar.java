@@ -93,6 +93,27 @@ public class Radar
         ui.line(ui.mouseX, ui.mouseY, ui.mouseX - 25, ui.mouseY);
         ui.line(ui.mouseX, ui.mouseY, ui.mouseX, ui.mouseY + 25);
         ui.line(ui.mouseX, ui.mouseY, ui.mouseX, ui.mouseY - 25);
+
+    }
+
+    public void Eoe()
+    {
+        ui.stroke(0);
+        ui.noFill();
+         ui.line(ui.mouseX, ui.mouseY, ui.mouseX, 200); 
+
+        if (ui.key == ' ')
+		{
+            ui.stroke(255);
+            ui.noFill();
+            ui.line(ui.mouseX, ui.mouseY, ui.mouseX, 200);
+        }
+            else
+            {
+                ui.stroke(0);
+                ui.noFill();
+                 ui.line(ui.mouseX, ui.mouseY, ui.mouseX, 200);
+            }
     }
 
     /**

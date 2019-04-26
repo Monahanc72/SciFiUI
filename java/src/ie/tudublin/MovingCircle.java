@@ -100,6 +100,7 @@ public class MovingCircle
 
             if(dx < 0)
         {
+            ui.fill(255);
             ui.rect(120,190,3,3);
             ui.rect(220,170,3,3);
             ui.rect(346,165,3,3);
