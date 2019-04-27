@@ -47,16 +47,10 @@ public class MovingCircle
         x += dx;
         if ((x > ui.width - radius -500) || (x < radius +80 ))
         {
-            dx *= -1.05;
+            dx *= -1.10;
         }
-         //if(dx > 1.2 || dx < 0)
          if(dx > 1.2)
-           // if(dx > 49)
             {
-               // System.out.println("Hi");
-                // ui.fill(25, 96, 21);
-                 //ui.rect(70, 503, 230, 25);
-               // dx = 0;
                ui.fill(255);
                //ui.translate(width/2, height/2);
                //ui.rotate(PI/3);
@@ -82,9 +76,14 @@ public class MovingCircle
                ui.rect(650,385,3,3);
 
                ui.rect(119,55,3,3);
-               ui.rect(219,79,3,3);
-               ui.rect(319,39,3,3);
+               ui.rect(226,79,3,3);
+               ui.rect(323,39,3,3);
                ui.rect(419,110,3,3);
+               ui.rect(750,320,3,3);
+               ui.rect(750,280,3,3);
+               ui.rect(750,380,3,3);
+               ui.rect(750,220,3,3);
+               ui.rect(550,220,3,3);
                //
 
             }
@@ -97,7 +96,7 @@ public class MovingCircle
             ui.rect(346,165,3,3);
             ui.rect(405,123,3,3);
             ui.rect(505,450,3,3);
-            ui.rect(518,250,3,3);
+            ui.rect(523,250,3,3);
             ui.rect(496,270,3,3);
             ui.rect(234,313,3,3);
             ui.rect(372,229,3,3);
@@ -111,8 +110,8 @@ public class MovingCircle
             ui.rect(413,462,3,3);
             ui.rect(513,472,3,3);
             ui.rect(109,409,3,3);
-            ui.rect(209,309,3,3);
-            ui.rect(609,309,3,3);
+            ui.rect(209,30,3,3);
+            ui.rect(6015,309,3,3);
             ui.rect(600,366,3,3);
             ui.rect(59,309,3,3);
             ui.rect(89,339,3,3);
@@ -121,6 +120,22 @@ public class MovingCircle
             ui.rect(319,29,3,3);
             ui.rect(419,29,3,3);
             ui.rect(519,29,3,3);
+            ui.rect(19,250,3,3);
+            ui.rect(19,350,3,3);
+            ui.rect(50,250,3,3);
+            ui.rect(700,30,3,3);
+            ui.rect(706,70,3,3);
+            ui.rect(702,150,3,3);
+            ui.rect(720,50,3,3);
+            ui.rect(500,400,3,3);
+            ui.rect(400,351,3,3);
+            ui.rect(380,422,3,3);
+            ui.rect(450,433,3,3);
+            ui.rect(680,320,3,3);
+            ui.rect(720,320,3,3);
+            ui.rect(520,190,3,3);
+            ui.rect(590,180,3,3);
+
         }
 
        //System.out.println(x);
