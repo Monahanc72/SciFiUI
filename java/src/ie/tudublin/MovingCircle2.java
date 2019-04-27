@@ -35,17 +35,17 @@ public class MovingCircle2
             //    ui.fill(255);
             //    ui.noStroke();
             //    ui.rect(100,100,20,20); 
-            ui.fill(255);
-            ui.ellipse(270, 200, 100, 100);  // White rectangle
+            ui.fill(255,200,12);
+            ui.ellipse(270, 160, 80, 80);  // White rectangle
 
             ui.pushMatrix();
             ui.translate(30, 20);
-            ui.fill(0);  
-            ui.ellipse(180, 150, 100, 100);  // Black rectangle
+            ui.fill(0,0,100);  
+            ui.ellipse(180, 200, 90, 90);  // neptune
             ui.popMatrix();
 
-            ui.fill(100);  
-            ui.ellipse(150, 150, 100, 100);  // Gray rectangle
+            ui.fill(100,0,0);  
+            ui.ellipse(150, 300, 120, 120);  // Mars
 
 
     }
