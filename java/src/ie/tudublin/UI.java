@@ -63,6 +63,7 @@ public class UI extends PApplet
         //z.render();
         mc.update();
         mc.render();
+        mc2.render();
         //mc.keychk();
         //sh.render();
         radar.render();
