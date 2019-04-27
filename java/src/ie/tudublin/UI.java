@@ -9,7 +9,8 @@ public class UI extends PApplet
     private float x;
     private float y;
     Button b, z;
-    MovingCircle mc,ov;
+    MovingCircle mc;
+    MovingCircle2 mc2;
     Hud hud;
     Radar radar;
     Shapes sh;
@@ -46,7 +47,7 @@ public class UI extends PApplet
         b = new Button(this, 100, 550, 50, 30, "",0); //x,y,w,h
         z = new Button(this,600,550,100,50, "Warning",0);
         mc = new MovingCircle(this, width / 2, height * .75f, 20);
-        ov = new MovingCircle(this,width /2,height * .5f,200);
+        mc2 = new MovingCircle2(this,width /2, height * .75f, 20);
         radar = new Radar(this, 1, width / 2, height / 2, 35);
         hud = new Hud(this, 20, 20, 100, 100, "April 3rd 2019 \n Antartica ");
         sh = new Shapes(this,100,550,5,3);
@@ -74,7 +75,7 @@ public class UI extends PApplet
 
        if (keyCode == LEFT)
        {
-           mc.keychk();
+           mc2.keychk();
        }
     }
 
