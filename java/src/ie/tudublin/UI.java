@@ -59,7 +59,8 @@ public class UI extends PApplet
     {
         background(0);
        // hud.render();
-        //b.render();
+        b.render();
+        b.mouseClicked();
         //z.render();
         mc.update();
         mc.render();
@@ -79,6 +80,10 @@ public class UI extends PApplet
            mc2.keychk();
        }
     }
+
+	public char[] get(int which) {
+		return null;
+	}
 
 }
 
