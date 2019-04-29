@@ -44,8 +44,7 @@ public class UI extends PApplet
 
     public void setup()
     {
-        b = new Button(this, 100, 550, 50, 30, "",0); //x,y,w,h
-        z = new Button(this,600,550,100,50, "Warning",0);
+        b = new Button(this, x, y, width, height, "Hi"); //x,y,w,h
         mc = new MovingCircle(this, width / 2, height * .75f, 20);
         mc2 = new MovingCircle2(this,width /2, height * .75f, 20);
         radar = new Radar(this, 1, width / 2, height / 2, 35);
@@ -59,9 +58,6 @@ public class UI extends PApplet
     {
         background(0);
        // hud.render();
-        b.render();
-        b.mouseClicked();
-        //z.render();
         mc.update();
         mc.render();
         mc2.render();
@@ -73,6 +69,8 @@ public class UI extends PApplet
         
         fr.Eoe();
         radar.keychk();
+        b.render();
+        b.mouseClicked();
        // str.Eoe();
 
        if (keyCode == LEFT)

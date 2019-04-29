@@ -1,20 +1,37 @@
 package ie.tudublin;
-
+import java.util.ArrayList;
+import processing.data.Table;
+import processing.data.TableRow;
 import processing.core.PApplet;
 
 public class Button
 {
+    ArrayList<Button> buttons = new ArrayList<Button>();
     UI ui;
     private float x;
     private float y;
-    private float width;
-    private float height;
-    private float border = 20;
-    private float gap = 20;
+    private float width = 2;
+    private float height = 2;
+    private float  border = height;
+    private float gap = width;
     private String text;
-    private float d;
-    
-    public Button(UI ui, float x, float y, float width, float height, String text,float d)
+
+    public void loadProducts()
+    {
+        Table table = loadTable("cafe.csv", "header");
+        for(TableRow tr:table.rows())
+        {
+            Button b = new Button(tr);
+            buttons.add(b);
+        }        
+    }
+
+
+    private Table loadTable(String string, String string2) {
+        return null;
+    }
+
+    public Button(UI ui, float x, float y, float width, float height, String text)
     {
         this.ui = ui;
         this.x = x;
@@ -24,34 +41,36 @@ public class Button
         this.text = text;
     }
 
+    public Button(TableRow tr) {
+    }
+
     public void render()
     {
-       // ui.noFill();
-        // ui.stroke(255);
-        // ui.rect(270, 130, 40, 40);
         ui.noFill();
         ui.stroke(255);
-        ui.rect(x + 100, y - 50, width,height);
-        
-    }
+        ui.rect(x +100, y +200, 40, 20);
+        ui.textAlign(PApplet.CENTER, PApplet.CENTER);
+        ui.text(text, (x +100) + 40 * 0.5f, (y + 200) + 20 * 0.5f);
+    } 
 
 
     public void mouseClicked()
-  {
-         int which = -1;
+   {
+          int which = -1;
 
-         // The best way!!
-         if ((ui.mouseX > border && ui.mouseX < border + width))
-         {
-             if ((ui.mouseY - border) % (height + gap) < height)
-             {
-                 which = (int) ((ui.mouseY - border) / (height + gap));
-             }
-         }
-         if (which != -1)
+          // The best way!!
+          if ((ui.mouseX > border && ui.mouseX < border + width))
           {
-                  ui.rect(100,50,100,100);
-                   
+              if ((ui.mouseY - border) % (height + gap) < height)
+              {
+                  which = (int)((ui.mouseY - border) / (height + gap));
+              }
+              //which++;
           }
+          if (which != -1)
+           {
+               //System.out.println("cheese");
+               System.out.println(buttons.get(which));
+           }
       }
-}
+    }
