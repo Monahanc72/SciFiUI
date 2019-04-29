@@ -71,6 +71,7 @@ public class UI extends PApplet
         radar.keychk();
         b.render();
         b.mouseClicked();
+        b.ArekIsGay();
        // str.Eoe();
 
        if (keyCode == LEFT)
