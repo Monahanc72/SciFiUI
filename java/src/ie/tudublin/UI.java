@@ -58,6 +58,7 @@ public class UI extends PApplet
     {
         background(0);
        // hud.render();
+       mc.render2();
         mc.update();
         mc.render();
         mc2.render();

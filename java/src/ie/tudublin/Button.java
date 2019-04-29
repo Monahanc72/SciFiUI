@@ -10,16 +10,20 @@ public class Button
     UI ui;
     private float x;
     private float x1 = x;
+    private float x2 = x;
     private int j = 1;
     private float y;
     private float y1 = y;
+    private float y2 = y;
     private float width = 2;
     private float height = 2;
     private float  border;
+    private float k;
     private float gap;
     private String text;
     private float dx = 1;
     private float radius =50;
+    private float diameter = 10;
 
     public Button(UI ui, float x, float y, float width, float height, String text)
     {
@@ -40,19 +44,37 @@ public class Button
         ui.rect(x1 +400, y1 +550, 80, 40);
         ui.textAlign(PApplet.CENTER, PApplet.CENTER);
         ui.text(text, (x1 +421) + 40 * 0.5f, (y1 + 550) + 20 * 0.5f);
+        //2
+        ui.rect(x2 +500, y2 +550, 80, 40);
+        ui.textAlign(PApplet.CENTER, PApplet.CENTER);
+        ui.text(text, (x2 +421) + 40 * 0.5f, (y2 + 550) + 20 * 0.5f);
 
     } 
 
 
-    public void Eoe()
+    public void Shower()
     {
         ui.stroke(255);
         ui.fill(255,0,0);
-        ui.ellipse(x +55, y + 50, 10, 10);
-        ui.ellipse(x +50, y + 100, 10, 10);
-        ui.ellipse(x +45, y + 150, 10, 10);
+        ui.ellipse(x +125, y + 50, 10, 10);
+        ui.ellipse(x +100, y + 100, 10, 10);
+        ui.ellipse(x +75, y + 150, 10, 10);
+        ui.ellipse(x +50, y + 200, 10, 10);
+        ui.ellipse(x +25, y + 250, 10, 10);
 
     }
+
+
+    public void Eoe2()
+    {
+        ui.stroke(255);
+        ui.fill(0,255,0);
+        ui.rect(70, 553, 230, 25);
+        ui.fill(255);
+        ui.ellipse(x + 100, y + 100, diameter, diameter);
+
+    }
+    
 
     public void ArekIsGay()
     {
@@ -61,29 +83,31 @@ public class Button
         y +=dx;
         if ((x > ui.width) || (x < 0 ) || (y > ui.width) || (y < 0 ))
         {
-            dx *= -2.10;
+            dx *= -1.00;
+            System.out.println(dx);
         }
+
+        if(dx > 50)
+        {
+            dx = 1;
+        }
+
     }
+
+    // public void ArekIsGay2()
+    // {
+
+    //     x += dx;
+    //     y +=dx;
+    //     if ((x > ui.width) || (x < 0 ) || (y > ui.width) || (y < 0 ))
+    //     {
+    //         dx *= -2.10;
+    //     }
+    // }
 
 
     public void mouseClicked()
    {
-
-        //   // The best way!!
-        //   if ((ui.mouseX > border && ui.mouseX < border + width))
-        //   {
-        //       if ((ui.mouseY - border) % (height + gap) < height)
-        //       {
-        //           which = (int)((ui.mouseY - border) / (height + gap));
-        //       }
-        //       //which++;
-        //   }
-        //   if (which != -1)
-        //    {
-        //        //System.out.println("cheese");
-        //        System.out.println(buttons.get(which));
-        //    }
-            
         // This also works
         
         if (ui.mousePressed)
@@ -97,6 +121,22 @@ public class Button
                    System.out.println(j);
                 }
         }
+
+
+//2
+        if (ui.mousePressed)
+        {
+                if (ui.mouseX > x2 +500 && ui.mouseX < x2 +500 + 40  && ui.mouseY > y2 +550 && ui.mouseY < y2 +550 + 20)
+
+                {
+                
+                    k+=1;
+                   ui.delay(200);
+                   //System.out.println(j);
+                }
+        }
+
+
         
 
         if(j % 2 == 0)
@@ -104,9 +144,24 @@ public class Button
             //System.out.println("ArekIsGay");
             // ui.fill(255);
             // ui.rect(100, 100, 30, 30);
-            Eoe();
+            Shower();
+           //Eoe2();
             //ArekIsGay();
         }
+
+
+        if(k % 2 == 0)
+        {
+            //System.out.println("ArekIsGay");
+            // ui.fill(255);
+            // ui.rect(100, 100, 30, 30);
+          //  Eoe();
+           // Eoe2();
+            //ArekIsGay();
+        }
+
+
+
     }
 
 }
