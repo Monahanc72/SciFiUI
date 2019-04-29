@@ -17,6 +17,7 @@ public class Button
     private float gap;
     private String text;
     private float dx;
+    private float radius =50;
 
     public Button(UI ui, float x, float y, float width, float height, String text)
     {
@@ -42,21 +43,16 @@ public class Button
 
     public void Eoe()
     {
-       // ui.fill(200,21,50);
-       // ui.rect(70, 553, 230, 25);
         ui.stroke(255);
         ui.fill(255);
         ui.ellipse(20, 400, 50, 50);
-       // ui.stroke(255);
-        //ui.fill(51, 191, 88);
-        // Static field
-       // ui.textAlign(PApplet.CENTER, PApplet.CENTER);
     }
 
     public void ArekIsGay()
     {
+
         x += dx;
-        if ((x > ui.width - 50 -500) || (x < 50 +80 ))
+        if ((x > ui.width - radius -500) || (x < radius +80 ))
         {
             dx *= -1.10;
         }
@@ -102,6 +98,7 @@ public class Button
             // ui.fill(255);
             // ui.rect(100, 100, 30, 30);
             Eoe();
+            ArekIsGay();
         }
     }
 
