@@ -9,13 +9,14 @@ public class Button
     ArrayList<Button> buttons = new ArrayList<Button>();
     UI ui;
     private float x;
-    private int j = 0;
+    private int j = 1;
     private float y;
     private float width = 2;
     private float height = 2;
     private float  border;
     private float gap;
     private String text;
+    private float dx;
 
     public Button(UI ui, float x, float y, float width, float height, String text)
     {
@@ -37,6 +38,29 @@ public class Button
         ui.textAlign(PApplet.CENTER, PApplet.CENTER);
         ui.text(text, (x +100) + 40 * 0.5f, (y + 200) + 20 * 0.5f);
     } 
+
+
+    public void Eoe()
+    {
+       // ui.fill(200,21,50);
+       // ui.rect(70, 553, 230, 25);
+        ui.stroke(255);
+        ui.fill(255);
+        ui.ellipse(20, 400, 50, 50);
+       // ui.stroke(255);
+        //ui.fill(51, 191, 88);
+        // Static field
+       // ui.textAlign(PApplet.CENTER, PApplet.CENTER);
+    }
+
+    public void ArekIsGay()
+    {
+        x += dx;
+        if ((x > ui.width - 50 -500) || (x < 50 +80 ))
+        {
+            dx *= -1.10;
+        }
+    }
 
 
     public void mouseClicked()
@@ -74,9 +98,10 @@ public class Button
 
         if(j % 2 == 0)
         {
-            System.out.println("ArekIsGay");
-            ui.fill(255);
-            ui.rect(100, 100, 30, 30);
+            //System.out.println("ArekIsGay");
+            // ui.fill(255);
+            // ui.rect(100, 100, 30, 30);
+            Eoe();
         }
     }
 

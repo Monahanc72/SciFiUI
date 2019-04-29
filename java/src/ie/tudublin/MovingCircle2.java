@@ -36,7 +36,7 @@ public class MovingCircle2
             //    ui.noStroke();
             //    ui.rect(100,100,20,20); 
             ui.fill(255,200,12);
-            ui.ellipse(270, 160, 80, 80);  // White rectangle
+            ui.ellipse(270, 160, 80, 80);  // yellow planet
 
             ui.pushMatrix();
             ui.translate(30, 20);
