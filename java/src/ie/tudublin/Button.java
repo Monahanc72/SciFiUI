@@ -56,11 +56,16 @@ public class Button
     {
         ui.stroke(255);
         ui.fill(255,0,0);
-        ui.ellipse(x +125, y + 50, 10, 10);
-        ui.ellipse(x +100, y + 100, 10, 10);
-        ui.ellipse(x +75, y + 150, 10, 10);
-        ui.ellipse(x +50, y + 200, 10, 10);
-        ui.ellipse(x +25, y + 250, 10, 10);
+        ui.ellipse(x +175, y + 50, 10, 10);
+        ui.ellipse(x +150, y + 100, 10, 10);
+        ui.ellipse(x +125, y + 150, 10, 10);
+        ui.ellipse(x +100, y + 200, 10, 10);
+        ui.ellipse(x +75, y + 250, 10, 10);
+        ui.ellipse(x +50, y + 300, 10, 10);
+        ui.ellipse(x +25, y + 350, 10, 10);
+        ui.ellipse(x +0, y + 400, 10, 10);
+        // ui.ellipse(x  -50, y + 200, 10, 10);
+        // ui.ellipse(x - 25, y + 250, 10, 10);
 
     }
 
@@ -72,6 +77,7 @@ public class Button
         ui.rect(70, 553, 230, 25);
         ui.fill(255);
         ui.ellipse(x + 100, y + 100, diameter, diameter);
+       // ui.text("Hi");
 
     }
     
@@ -156,7 +162,7 @@ public class Button
             // ui.fill(255);
             // ui.rect(100, 100, 30, 30);
           //  Eoe();
-           // Eoe2();
+            Eoe2();
             //ArekIsGay();
         }
 

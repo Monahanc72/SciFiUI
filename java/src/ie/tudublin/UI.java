@@ -8,7 +8,7 @@ public class UI extends PApplet
 {
     private float x;
     private float y;
-    Button b, z;
+    Button b, b2;
     MovingCircle mc;
     MovingCircle2 mc2;
     Hud hud;
@@ -45,6 +45,7 @@ public class UI extends PApplet
     public void setup()
     {
         b = new Button(this, x, y, width, height, "MeteorShower"); //x,y,w,h
+        b2 = new Button(this, x +70, y +553, 230, 25, "hi"); //x,y,w,h
         mc = new MovingCircle(this, width / 2, height * .75f, 20);
         mc2 = new MovingCircle2(this,width /2, height * .75f, 20);
         radar = new Radar(this, 1, width / 2, height / 2, 35);
@@ -73,6 +74,9 @@ public class UI extends PApplet
         b.render();
         b.mouseClicked();
         b.ArekIsGay();
+        //b2.render();
+        //b2.mouseClicked();
+        //b2.ArekIsGay();
        // str.Eoe();
 
        if (keyCode == LEFT)
