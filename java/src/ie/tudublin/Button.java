@@ -37,9 +37,9 @@ public class Button
     {
         ui.noFill();
         ui.stroke(255);
-        ui.rect(x1 +100, y1 +200, 40, 20);
+        ui.rect(x1 +400, y1 +550, 80, 40);
         ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-        ui.text(text, (x1 +100) + 40 * 0.5f, (y1 + 200) + 20 * 0.5f);
+        ui.text(text, (x1 +421) + 40 * 0.5f, (y1 + 550) + 20 * 0.5f);
 
     } 
 
@@ -49,7 +49,7 @@ public class Button
         ui.stroke(255);
         ui.fill(255,0,0);
         ui.ellipse(x +55, y + 50, 10, 10);
-        ui.ellipse(x +50, y + 10, 10, 10);
+        ui.ellipse(x +50, y + 100, 10, 10);
         ui.ellipse(x +45, y + 150, 10, 10);
 
     }
@@ -88,7 +88,7 @@ public class Button
         
         if (ui.mousePressed)
         {
-                if (ui.mouseX > x1 +100 && ui.mouseX < x1 +100 + 40  && ui.mouseY > y1 +200 && ui.mouseY < y1 +200 + 20)
+                if (ui.mouseX > x1 +400 && ui.mouseX < x1 +400 + 40  && ui.mouseY > y1 +550 && ui.mouseY < y1 +550 + 20)
 
                 {
                 

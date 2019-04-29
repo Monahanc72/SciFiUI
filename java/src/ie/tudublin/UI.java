@@ -44,7 +44,7 @@ public class UI extends PApplet
 
     public void setup()
     {
-        b = new Button(this, x, y, width, height, "Hi"); //x,y,w,h
+        b = new Button(this, x, y, width, height, "MeteorShower"); //x,y,w,h
         mc = new MovingCircle(this, width / 2, height * .75f, 20);
         mc2 = new MovingCircle2(this,width /2, height * .75f, 20);
         radar = new Radar(this, 1, width / 2, height / 2, 35);
