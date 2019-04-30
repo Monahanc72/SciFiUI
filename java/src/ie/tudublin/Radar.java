@@ -83,7 +83,6 @@ public class Radar
     public void update()
     {
         theta += PApplet.TWO_PI * timeDelta * frequency;
-        //theta2 += timeDot * frequency;
         //crosshair for aiming
         ui.stroke(255);
         ui.noFill();
@@ -104,16 +103,10 @@ public class Radar
 
         if (ui.mousePressed)
 		{
-            ui.stroke(255);
+            ui.stroke(255,0,0);
             ui.noFill();
             ui.line(400, 500, ui.mouseX, ui.mouseY);
         }
-            else
-            {
-                // ui.stroke(0);
-                // ui.noFill();
-                //  ui.line(ui.mouseX, ui.mouseY, ui.mouseX, 200);
-            }
     }
 
     /**

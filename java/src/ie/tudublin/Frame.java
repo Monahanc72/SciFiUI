@@ -26,7 +26,6 @@ public class Frame
           ui.line(100, 100, 720, 99);//top centre
           ui.line(100, 100, 720, 99);//top centre
           ui.line(100, 500, 720, 501); //bottom centre
-          //ui.triangle()
           ui.line(100, 500, 720, 501); //bottom centre
           ui.line(-100, 300, 100, 500); //bottom left
           ui.line(-100, 300, 100, 500); //bottom left
@@ -37,16 +36,8 @@ public class Frame
           ui.line(-100, 300, 100, 100); //top left
           ui.line(-100, 300, 100, 100); //top left
 
-        //   ui.translate(width/2, height/2);
-        //   ui.rotate(PI/3);
-        //   ui.rect(-26, -26, 3,3);
-        //   ui.rect(0, 0, 3,3);
-        //   ui.rect(126, 26, 2,2);
-        //   ui.rect(126, 26, 2,2);
-        //   ui.rect(146, 26, 2,2);
-        //   ui.rect(186, 26, 3,3);
-        //   ui.rect(216, 26, 3,3);
-        //   ui.rect(322, 52, 3,3); 
+          ui.fill(255);
+          ui.triangle(430,500,400,470,370,500);
 
     
     }

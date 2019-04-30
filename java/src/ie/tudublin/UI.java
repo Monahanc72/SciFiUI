@@ -69,8 +69,9 @@ public class UI extends PApplet
         radar.update();
         //hud.render();   
         
-        fr.Eoe();
         radar.keychk();
+        fr.Eoe();
+        //radar.keychk();
         b.render();
         b.mouseClicked();
         b.ArekIsGay();
