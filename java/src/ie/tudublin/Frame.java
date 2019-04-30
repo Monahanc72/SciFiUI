@@ -26,6 +26,7 @@ public class Frame
           ui.line(100, 100, 720, 99);//top centre
           ui.line(100, 100, 720, 99);//top centre
           ui.line(100, 500, 720, 501); //bottom centre
+          //ui.triangle()
           ui.line(100, 500, 720, 501); //bottom centre
           ui.line(-100, 300, 100, 500); //bottom left
           ui.line(-100, 300, 100, 500); //bottom left

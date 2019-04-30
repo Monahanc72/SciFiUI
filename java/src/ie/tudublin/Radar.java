@@ -102,11 +102,11 @@ public class Radar
         ui.noFill();
          ui.line(ui.mouseX, ui.mouseY, ui.mouseX, 200); 
 
-        if (ui.key == ' ')
+        if (ui.mousePressed)
 		{
             ui.stroke(255);
             ui.noFill();
-            ui.line(ui.mouseX, ui.mouseY, ui.mouseX, 200);
+            ui.line(400, 500, ui.mouseX, ui.mouseY);
         }
             else
             {
