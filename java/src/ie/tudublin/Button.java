@@ -1,7 +1,5 @@
 package ie.tudublin;
 import java.util.ArrayList;
-import processing.data.Table;
-import processing.data.TableRow;
 import processing.core.PApplet;
 
 public class Button
@@ -64,8 +62,6 @@ public class Button
         ui.ellipse(x +50, y + 300, 10, 10);
         ui.ellipse(x +25, y + 350, 10, 10);
         ui.ellipse(x +0, y + 400, 10, 10);
-        // ui.ellipse(x  -50, y + 200, 10, 10);
-        // ui.ellipse(x - 25, y + 250, 10, 10);
 
     }
 
@@ -76,8 +72,6 @@ public class Button
         ui.fill(0,255,0);
         ui.rect(70, 553, 230, 25);
         ui.fill(255);
-        ui.ellipse(x + 100, y + 100, diameter, diameter);
-       // ui.text("Hi");
 
     }
     
@@ -99,17 +93,6 @@ public class Button
         }
 
     }
-
-    // public void ArekIsGay2()
-    // {
-
-    //     x += dx;
-    //     y +=dx;
-    //     if ((x > ui.width) || (x < 0 ) || (y > ui.width) || (y < 0 ))
-    //     {
-    //         dx *= -2.10;
-    //     }
-    // }
 
 
     public void mouseClicked()
@@ -138,7 +121,6 @@ public class Button
                 
                     k+=1;
                    ui.delay(200);
-                   //System.out.println(j);
                 }
         }
 
@@ -147,23 +129,13 @@ public class Button
 
         if(j % 2 == 0)
         {
-            //System.out.println("ArekIsGay");
-            // ui.fill(255);
-            // ui.rect(100, 100, 30, 30);
             Shower();
-           //Eoe2();
-            //ArekIsGay();
         }
 
 
         if(k % 2 == 0)
         {
-            //System.out.println("ArekIsGay");
-            // ui.fill(255);
-            // ui.rect(100, 100, 30, 30);
-          //  Eoe();
             Eoe2();
-            //ArekIsGay();
         }
 
 

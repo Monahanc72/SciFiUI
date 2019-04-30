@@ -69,7 +69,6 @@ public class MovingCircle
          if(dx > 1.2)
             {
                ui.fill(255);
-               //ui.translate(width/2, height/2);
                //ui.rotate(PI/3);
                ui.rect(100,200,3,3);
                ui.rect(200,110,3,3);
