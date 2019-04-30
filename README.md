@@ -22,4 +22,11 @@ The assignment itself was very interesting, I've always liked the idea of creati
 My youtube video is linked below 
 This is a youtube video:
 
-[![YouTube](https://www.youtube.com/watch?v=pF7g7RDW7Lw)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YpF7g7RDW7Lw/0.jpg)](https://www.youtube.com/watch?v=pF7g7RDW7Lw)
+
+
+
+
+//[![YouTube](https://www.youtube.com/watch?v=pF7g7RDW7Lw)
+
+
