@@ -45,6 +45,10 @@ public class MovingCircle
 
     public void render2()
     {
+        ui.noStroke();
+        ui.fill(0,0,0);
+        ui.rect(1, 553, 70, 25);
+        ui.stroke(255);
         ui.fill(0,255,0);
         ui.rect(70, 553, 230, 25);
         ui.stroke(255);
@@ -52,6 +56,9 @@ public class MovingCircle
         ui.ellipse(x, y, diameter, diameter);
         ui.stroke(255);
         ui.fill(51, 191, 88);
+        
+
+    
         // Static field
         ui.textAlign(PApplet.CENTER, PApplet.CENTER);
     }
@@ -61,10 +68,13 @@ public class MovingCircle
 
     public void update()
     {
+        ui.noStroke();
+        ui.fill(0,0,0);
+        ui.rect(1, 553, 70, 25);
         x += dx;
         if ((x > ui.width - radius -500) || (x < radius +80 ))
         {
-            dx *= -1.06;
+            dx *= -1.15;
         }
          if(dx > 1.2)
             {
@@ -154,12 +164,12 @@ public class MovingCircle
 
         }
 
-        if(dx > 8)
+        if(dx > 7)
         {
             dx = 1; //resets
         }
        //System.out.println(x);
-        //System.out.println(dx);
+        System.out.println(dx);
     }
 
     public void keychk()

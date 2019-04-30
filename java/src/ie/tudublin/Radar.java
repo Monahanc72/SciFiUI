@@ -1,3 +1,10 @@
+/* OOP Assignment 2018-2019
+    Conor Monahan C16475956 DT282/2
+    Radar class. This class draws and displays a radar which appears in the lower corner of the screen.
+    A line iterates around the radar and displays 3 points on the circle to in coming space crafts.
+
+*/
+
 package ie.tudublin;
 
 import processing.core.PApplet;
@@ -97,10 +104,6 @@ public class Radar
 
     public void keychk()
     {
-        ui.stroke(0);
-        ui.noFill();
-         ui.line(ui.mouseX, ui.mouseY, ui.mouseX, 200); 
-
         if (ui.mousePressed)
 		{
             ui.stroke(255,0,0);

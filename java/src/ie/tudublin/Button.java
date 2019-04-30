@@ -1,3 +1,10 @@
+/* OOP Assignment 2018-2019
+    Conor Monahan C16475956 DT282/2
+    Button class. This class draws and displays buttons which appear near the bottom of the screen.
+    Two buttons, one will change the colour of the 'speed bar' which indicates how fast the spaceship is going by using a moving ball. The second button enables to user to encounter a meteor shower in space. The meteors travel diagonally from left to right of the screen, then come back and forth.
+
+*/
+
 package ie.tudublin;
 import java.util.ArrayList;
 import processing.core.PApplet;
