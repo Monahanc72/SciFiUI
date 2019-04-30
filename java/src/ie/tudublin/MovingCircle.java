@@ -1,3 +1,5 @@
+//Conor Monahan C16475956 Dt282/2
+
 package ie.tudublin;
 
 import processing.core.PApplet;
@@ -42,7 +44,7 @@ public class MovingCircle
         ui.textAlign(PApplet.CENTER, PApplet.CENTER);
     }
 
-
+//second circle
     public void render2()
     {
         ui.noStroke();
@@ -78,6 +80,7 @@ public class MovingCircle
         }
          if(dx > 1.2)
             {
+                //stars
                ui.fill(255);
                //ui.rotate(PI/3);
                ui.rect(100,200,3,3);
@@ -113,7 +116,7 @@ public class MovingCircle
                //
 
             }
-
+            //more stars
             if(dx < 0)
         {
             ui.fill(255);
@@ -166,10 +169,8 @@ public class MovingCircle
 
         if(dx > 7)
         {
-            dx = 1; //resets
+            dx = 1; //resets circle when reaches a certain speed.
         }
-       //System.out.println(x);
-        System.out.println(dx);
     }
 
     public void keychk()

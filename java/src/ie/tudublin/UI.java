@@ -1,8 +1,8 @@
+//Conor Monahan C16475956 Dt282/2
+
 package ie.tudublin;
 
 import processing.core.PApplet;
-import java.util.ArrayList;
-//import processing.core.PImage;
 
 public class UI extends PApplet
 {
@@ -34,7 +34,7 @@ public class UI extends PApplet
 
     public void settings()
     {
-        size(800, 800);
+       size(800, 800);
         // Use fullscreen instead of size to make your interface fullscreen
         //fullScreen(P3D); 
     }
@@ -61,7 +61,7 @@ public class UI extends PApplet
         fr.Eoe();
         b.render();
         b.mouseClicked();
-        b.ArekIsGay();
+        b.MoveMeteors();
 
        if (keyCode == ' ')
        {

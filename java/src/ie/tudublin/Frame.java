@@ -1,3 +1,4 @@
+//Conor Monahan C16475956 Dt282/2
 package ie.tudublin;
 
 import processing.core.PApplet;
@@ -37,7 +38,7 @@ public class Frame
           ui.line(-100, 300, 100, 100); //top left
 
           ui.fill(255);
-          ui.triangle(430,500,400,470,370,500);
+          ui.triangle(430,500,400,470,370,500); //cannon // shooter // barrel
 
     
     }

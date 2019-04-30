@@ -83,7 +83,7 @@ public class Button
     }
     
 
-    public void ArekIsGay()
+    public void MoveMeteors()
     {
 
         x += dx;
@@ -91,7 +91,6 @@ public class Button
         if ((x > ui.width) || (x < 0 ) || (y > ui.width) || (y < 0 ))
         {
             dx *= -1.00;
-            System.out.println(dx);
         }
 
         if(dx > 50)
@@ -104,7 +103,7 @@ public class Button
 
     public void mouseClicked()
    {
-        // This also works
+        // usage of the button
         
         if (ui.mousePressed)
         {
@@ -133,7 +132,7 @@ public class Button
 
 
         
-
+//if statements to control the buttons i.e when pressed when not pressed
         if(j % 2 == 0)
         {
             Shower();

@@ -40,12 +40,12 @@ public class Radar
         float y2 = (pos.y +150) - (float) Math.cos(theta) * radius;
         ui.line(pos.x +300, pos.y +150, x2 +10, y2);
 
-
+//circles of radar
         ui.ellipse(pos.x + 300, pos.y +150, radius * (float) 1.75, radius * (float) 1.75);
         ui.ellipse(pos.x + 300, pos.y +150, radius * (float) 1.0, radius * (float) 1.0);
         ui.ellipse(pos.x + 300, pos.y +150, radius * (float) 0.25, radius * (float) 0.25);
 
-
+//dots of radar
     if(x2 == (pos.x + 300) + (radius * 1))
     {
         opacity = 255;
@@ -71,7 +71,7 @@ public class Radar
         opacity3--;
     }
 
-
+//line hitting points on circle
     ui.stroke(opacity,opacity,opacity);
     ui.fill(opacity);
     ui.ellipse((pos.x + 290) + (radius * (float)1), pos.y +150, diameter, diameter);
