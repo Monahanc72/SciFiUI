@@ -79,7 +79,7 @@ public class UI extends PApplet
         //b2.ArekIsGay();
        // str.Eoe();
 
-       if (keyCode == LEFT)
+       if (keyCode == ' ')
        {
            mc2.keychk();
        }

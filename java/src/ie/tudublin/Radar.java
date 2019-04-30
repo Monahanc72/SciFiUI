@@ -110,9 +110,9 @@ public class Radar
         }
             else
             {
-                ui.stroke(0);
-                ui.noFill();
-                 ui.line(ui.mouseX, ui.mouseY, ui.mouseX, 200);
+                // ui.stroke(0);
+                // ui.noFill();
+                //  ui.line(ui.mouseX, ui.mouseY, ui.mouseX, 200);
             }
     }
 
